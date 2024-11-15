@@ -1,0 +1,4 @@
+- Current sign caption
+- Stylize
+    - Win visualization
+- Reset button

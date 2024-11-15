@@ -1,0 +1,71 @@
+:root {
+    --main: #030368;
+    --opposite: white;
+
+    --size: 0.3em;
+    --mark-size: 3em;
+    --caption-size: 1.2em;
+    --cell-size: 5em;
+    --grid-cells-size: 3;
+    --congrats-size: 15em;
+
+    --font-family: cursive;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cells-size), 1fr);
+    border: var(--size) solid var(--main);
+    background-color: var(--main);
+    border-radius: 1.5em;
+    overflow: clip;
+    grid-gap: var(--size);
+}
+
+.caption {
+    font-size: var(--caption-size);
+    font-family: var(--font-family);
+    text-align: right;
+    color: black;
+}
+
+.Cell {
+    height: var(--cell-size);
+    width: var(--cell-size);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: var(--opposite);
+}
+
+.mark {
+    font-size: var(--mark-size);
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--main);
+}
+
+.congrats-hidden{
+    display: none;
+}
+
+.congrats  {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100vh;
+    font-family: var(--font-family);
+    font-size: var(--congrats-size);
+    background-color: var(--opposite);
+}
